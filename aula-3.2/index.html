@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HMTL</title>
     <style>
+        body{
+            font-size: 16px;
+        }
         h1{
             width: 65px;
             color: orangered;
+            font-family: sans-serif;
         }
         ul{
             background-color: beige;
@@ -16,15 +20,34 @@
         .background-defined{
             background-color: aliceblue;
         }
+        p{
+            font-weight: 600;
+            font-size: 3em;
+        }
+        ul{
+            font-style: italic;
+            line-height: 40px;
+            text-align: justify;
+            text-decoration: underline;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+        #brown{
+            background-color: brown;
+        }
     </style>
 </head>
 <body>
     <h1>Exercícios 3.2</h1>
     <p class="background-defined">Qual é a sua cor favorita?</p>
     <ul class="background-defined">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="yellow">Amarelo</li>
+      <li id="red">Vermelho</li>
+      <li id="brown">Marrom</li>
     </ul>
 </body>
 </html>
