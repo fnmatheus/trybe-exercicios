@@ -141,13 +141,44 @@ function repetition(array) {
     numberRepetition[array[number]] = 0;
     for(let index = 0; index < array.length; index += 1) {
       if(array[index] == array[number]) {
-        numberRepetition[array[number]] += 1
+        numberRepetition[array[number]] += 1;
       };
     };
   };
   return numberRepetition;
-}
+};
 
 console.log(moreRepited([2, 3, 2, 5, 8, 2, 3]));
 // Exercicio 6
 console.log('// Exercicio 6');
+function allNumbersAdded(number) {
+  let allAdded = 0;
+  if(number >= 0) {
+    for(let index = 0; index <= number; index += 1) {
+      allAdded += index;
+    };
+    return allAdded;
+  };
+  return 'número não valido';
+};
+
+console.log(allNumbersAdded(5));
+// Exercicio 7
+console.log('// Exercicio 7');
+function isTheEnd (word, ending) {
+  if(word.length > ending.length) {
+     let endWordIndex = word.length - ending.length;
+     let endWord = '';
+     for(let index = 0; index < ending.length; index += 1) {
+       endWord += word[endWordIndex + index];
+     };
+     if(endWord == ending) {
+       return true;
+     };
+     return false;
+  };
+  return false;
+};
+
+console.log(isTheEnd('trybe', 'be'));
+console.log(isTheEnd('joaofernando', 'fernan'));
