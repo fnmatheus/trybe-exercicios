@@ -127,9 +127,12 @@ console.log(bigestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'
 console.log('// Exercicio 5');
 function moreRepited(array) {
   let numberRepetition = repetition(array);
-  let moreRepitedNumber = numberRepetition[Object.keys(numberRepetition)[0]]
+  let moreRepitedNumber = Object.keys(numberRepetition)[0];
   for(let index in numberRepetition){
-  }
+    if(numberRepetition[index] > numberRepetition[moreRepitedNumber]) {
+      moreRepitedNumber = index;
+    };
+  };
   return moreRepitedNumber;
 };
 function repetition(array) {
@@ -146,3 +149,5 @@ function repetition(array) {
 }
 
 console.log(moreRepited([2, 3, 2, 5, 8, 2, 3]));
+// Exercicio 6
+console.log('// Exercicio 6');
