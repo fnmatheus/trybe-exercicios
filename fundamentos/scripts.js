@@ -43,14 +43,27 @@ let bigestPrimeNumber = null;
 for(let analyzedNumber = 0; analyzedNumber <= referencialNumber; analyzedNumber += 1) {
   let dividers = 0;
   for(let index = 0; index <= analyzedNumber; index += 1) {
-    if (analyzedNumber % index == 0) {
+    if(analyzedNumber % index == 0) {
       dividers += 1;
     };
   };
   if(dividers == 2) {
     bigestPrimeNumber = analyzedNumber;
   };
-}
+};
+console.log(bigestPrimeNumber);
+
+for(let analyzedNumber = referencialNumber; analyzedNumber <= 0; analyzedNumber -= 1) {
+  let dividers = 0;
+  for(let divisor = 0; divisor <= analyzedNumber; divisor += 1) {
+    if(analyzedNumber % divisor == 0) {
+      dividers += 1;
+    };
+  };
+  if(dividers == 2) {
+    bigestPrimeNumber = analyzedNumber;
+  };
+};
 console.log(bigestPrimeNumber);
 // Bonus
 let n = 5;
