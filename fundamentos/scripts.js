@@ -182,3 +182,70 @@ function isTheEnd (word, ending) {
 
 console.log(isTheEnd('trybe', 'be'));
 console.log(isTheEnd('joaofernando', 'fernan'));
+// Parte Bonus
+console.log('// Parte Bonus');
+// Exercicio 1
+console.log('// Exercicio 1');
+function addNumber(numberArray) {
+  let array = numberArray;
+  let index = 0;
+  let number = 0;
+  while (index < array.length) {
+    if (array[index] < array[index + 1]) {
+      number += array[index + 1] - array[index];
+      array.splice(0, 2);
+    } else {
+      number += array[index];
+      array.splice(0, 1);
+    }
+  }
+  return number
+}
+
+function letterToNumber(array) {
+  let numbersInArray = [];
+  for (let number of array) {
+    switch (number) {
+      case 'I':
+        numbersInArray.push(1);
+        break;
+      case 'V':
+        numbersInArray.push(5);
+        break;
+      case 'X':
+        numbersInArray.push(10);
+        break;
+      case 'L':
+        numbersInArray.push(50);
+        break;
+      case 'C':
+        numbersInArray.push(100);
+        break;
+      case 'D':
+        numbersInArray.push(500);
+        break;
+      case 'M':
+        numbersInArray.push(1000);
+        break;
+      default:
+        return 'Esse texto não são números romanos';
+    }
+  }
+  return addNumber(numbersInArray);
+}
+
+function stringToArray(string) {
+  let array = [];
+  for (let key of string) {
+    array.push(key);
+  }
+  return array;
+}
+
+function decodeRomaneNumber(string) {
+  let array = stringToArray(string);
+  let number = letterToNumber(array);
+  return number;
+}
+
+console.log(decodeRomaneNumber('MMMD'));
