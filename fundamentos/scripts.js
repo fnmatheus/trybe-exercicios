@@ -188,8 +188,8 @@ console.log('// Parte Bonus');
 console.log('// Exercicio 1');
 function addNumber(numberArray) {
   let array = numberArray;
-  let index = 0;
   let number = 0;
+  let index = 0;
   while (index < array.length) {
     if (array[index] < array[index + 1]) {
       number += array[index + 1] - array[index];
@@ -199,7 +199,7 @@ function addNumber(numberArray) {
       array.splice(0, 1);
     }
   }
-  return number
+  return number;
 }
 
 function letterToNumber(array) {
@@ -248,4 +248,25 @@ function decodeRomaneNumber(string) {
   return number;
 }
 
-console.log(decodeRomaneNumber('MMMD'));
+console.log(decodeRomaneNumber('XLVII'));
+// Exercicio 2
+console.log('// Exercicio 2');
+function itIsEven(array) {
+  let evenNumbers = [];
+  for (let key of array) {
+    if (key % 2 === 0) {
+      evenNumbers.push(key);
+    }
+  }
+  return evenNumbers;
+}
+
+function arrayOfNumbers(vector) {
+  let evenNumbers = [];
+  for (let key of vector) {
+    evenNumbers.push(itIsEven(key));
+  }
+  return evenNumbers;
+}
+
+console.log(arrayOfNumbers([[1, 2], [3,4,5,6], [7,8,9,10]]));
