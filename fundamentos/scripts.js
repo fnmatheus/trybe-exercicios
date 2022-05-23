@@ -270,3 +270,89 @@ function arrayOfNumbers(vector) {
 }
 
 console.log(arrayOfNumbers([[1, 2], [3,4,5,6], [7,8,9,10]]));
+// Exercicio 3
+console.log('// Exercicio 3');
+const basket = [
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+function fruitsCount(array) {
+  let basketCount = {};
+  for (let key in array) {
+    let count = 1;
+    if (basketCount[array[key]] >= 1) {
+      count += basketCount[array[key]];
+    }
+    basketCount[array[key]] = count;
+  }
+  return basketCount;
+}
+
+console.log(fruitsCount(basket));
+// variavel para o exercicio 4 e 5
+let moradores = {
+  blocoUm: [
+    {
+      nome: 'Luiza',
+      sobrenome: 'Guimarães',
+      andar: 10,
+      apartamento: 1005,
+    },
+    {
+      nome: 'William',
+      sobrenome: 'Albuquerque',
+      andar: 5,
+      apartamento: 502,
+    },
+  ],
+  blocoDois: [
+    {
+      nome: 'Murilo',
+      sobrenome: 'Ferraz',
+      andar: 8,
+      apartamento: 804,
+    },
+    {
+      nome: 'Zoey',
+      sobrenome: 'Brooks',
+      andar: 1,
+      apartamento: 101,
+    },
+  ],
+};
+// Exercicio 4
+console.log('// Exercicio 4');
+let moradorBloco2Ap101 = moradores.blocoDois[moradores.blocoDois.length - 1];
+let nomeCompleto = `${moradorBloco2Ap101['nome']} ${moradorBloco2Ap101['sobrenome']}`;
+let enderecoNoBloco = `${moradorBloco2Ap101['andar']}° andar, apartamento ${moradorBloco2Ap101['apartamento']}`;
+console.log(`O morador do bloco 2 de nome ${nomeCompleto} mora no ${enderecoNoBloco}`);
+// Exercicio 5
+console.log('// Exercicio 5');
+console.log('// Bloco 1');
+for (let index in moradores.blocoUm) {
+  let moradoresBoloco1 = moradores.blocoUm[index];
+  let nomeCompleto = `${moradoresBoloco1['nome']} ${moradoresBoloco1['sobrenome']}`;
+  console.log(nomeCompleto);
+}
+console.log('// Bloco 2');
+for (let index in moradores.blocoDois) {
+  let moradoresBoloco2 = moradores.blocoDois[index];
+  let nomeCompleto = `${moradoresBoloco2['nome']} ${moradoresBoloco2['sobrenome']}`;
+  console.log(nomeCompleto);
+}
