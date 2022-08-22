@@ -1,0 +1,24 @@
+{
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "description": "Este repositório contém todos os exercícios além de listar todos os projetos feitos por _[Matheus Nascimento](https://github.com/fnmatheus)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnmatheus/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fnmatheus/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/fnmatheus/trybe-exercicios#readme",
+  "dependencies": {
+    "redux": "^4.2.0"
+  },
+  "devDependencies": {}
+}
